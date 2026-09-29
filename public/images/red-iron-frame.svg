@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2b2230"/>
+      <stop offset=".6" stop-color="#6b3a2a"/>
+      <stop offset="1" stop-color="#c2632f"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#sky)"/>
+  <!-- tree line -->
+  <path d="M0 360 L20 330 L35 350 L55 300 L75 345 L95 315 L115 350 L140 290 L165 345 L185 320 L205 355 L620 355 L640 320 L660 350 L680 295 L705 345 L725 310 L750 350 L775 300 L800 340 V450 H0Z" fill="#1a2620"/>
+  <!-- slab -->
+  <path d="M120 380 L560 380 L700 330 L260 330 Z" fill="#8f969b"/>
+  <path d="M120 380 L560 380 L560 392 L120 392 Z" fill="#6c7378"/>
+  <g stroke="#b3361f" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- far frames (lighter) -->
+    <g stroke="#8e2e1c" stroke-width="7" opacity=".9">
+      <path d="M260 330 V210 L400 160 L540 210 V330"/>
+    </g>
+    <g stroke="#9c311d" stroke-width="8">
+      <path d="M225 343 V203 L372 150 L520 203 V343"/>
+    </g>
+    <g stroke="#a8341e" stroke-width="9">
+      <path d="M190 355 V196 L345 140 L500 196 V355"/>
+    </g>
+    <g stroke="#b3361f" stroke-width="10">
+      <path d="M155 368 V189 L318 130 L480 189 V368"/>
+    </g>
+    <!-- front frame (tapered rigid frame) -->
+    <path d="M120 380 V180 L290 118 L460 180 V380" stroke="#c73b22" stroke-width="13"/>
+    <path d="M120 180 L150 172 M460 180 L430 172" stroke="#c73b22" stroke-width="9"/>
+    <!-- eave struts & ridge -->
+    <path d="M120 180 L260 210 M460 180 L540 210 M290 118 L400 160" stroke="#d9d4cf" stroke-width="4"/>
+    <!-- purlins -->
+    <g stroke="#e0dcd6" stroke-width="3">
+      <path d="M163 164 L292 197"/><path d="M205 149 L328 184"/><path d="M248 133 L364 172"/>
+      <path d="M332 133 L436 172"/><path d="M375 149 L472 184"/><path d="M417 164 L508 197"/>
+    </g>
+    <!-- girts -->
+    <g stroke="#e0dcd6" stroke-width="3">
+      <path d="M120 240 L260 262"/><path d="M120 300 L260 314"/>
+      <path d="M460 240 L540 262"/><path d="M460 300 L540 314"/>
+    </g>
+    <!-- X bracing -->
+    <g stroke="#cfc9c2" stroke-width="2">
+      <path d="M155 189 L225 343 M225 203 L155 368"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Leads | Pine Point Metal</title>
+  <link rel="icon" href="/images/favicon.png" type="image/png">
+  <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+  <header class="bar">
+    <h1>Pine Point Metal <span>Quote requests</span></h1>
+    <div class="bar__actions">
+      <a href="/admin/api/leads.csv" class="btn btn--light">Export CSV</a>
+      <button class="btn btn--light" id="logout">Sign out</button>
+    </div>
+  </header>
+
+  <main class="dash">
+    <section class="kpis" id="kpis" aria-label="Summary"></section>
+
+    <div class="alert" id="overdue" hidden></div>
+
+    <nav class="filters" id="filters" aria-label="Filter by status"></nav>
+
+    <section class="leads" id="leads" aria-live="polite"></section>
+  </main>
+
+  <script src="/admin/admin.js"></script>
+</body>
+</html>

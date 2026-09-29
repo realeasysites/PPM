@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Sign in | Pine Point Metal Leads</title>
+  <link rel="icon" href="/images/favicon.png" type="image/png">
+  <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body class="login">
+  <form class="login__card" id="login-form">
+    <h1>Pine Point Metal</h1>
+    <p>Quote request dashboard</p>
+    <label>Password<input type="password" name="password" autocomplete="current-password" required autofocus></label>
+    <button type="submit">Sign in</button>
+    <p class="login__err" role="alert"></p>
+  </form>
+  <script>
+    document.getElementById('login-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var err = document.querySelector('.login__err');
+      err.textContent = '';
+      fetch('/admin/login', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ password: this.password.value }) })
+        .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
+        .then(function (res) { if (res.ok) location.href = '/admin'; else err.textContent = res.j.error || 'Sign-in failed.'; })
+        .catch(function () { err.textContent = 'Could not reach the server.'; });
+    });
+  </script>
+</body>
+</html>
